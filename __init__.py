@@ -10,7 +10,7 @@ def create_app(test_config = None):
     )
 
     if test_config is None:
-        #load instance config if exits when not testing
+        #load instance config if exists, when not testing
         app.config.from_pyfile('config.py',silent=True)
     else:
         app.config.from_mapping(test_config)
